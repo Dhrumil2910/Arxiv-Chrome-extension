@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Researcher",
+    "description": "Help with quick research details",
+    "version": "1.0",
+    "background": {
+        "scripts": ["/js/background.js"],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "Persistence",
+        "default_popup": "main.html"
+
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["/js/global-dependency/jquery.min.js"],
+        "run_at": "document_end",
+        "all_frames": true
+    }],
+    "permissions": [
+        "cookies",
+        "tabs",
+        "activeTab",
+        "notifications",
+        "<all_urls>",
+        "webNavigation"
+    ]
+}

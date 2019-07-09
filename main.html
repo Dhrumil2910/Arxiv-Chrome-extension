@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <style type="text/css">
+    body {
+      min-width: 700px;
+      /* your desired width */
+      height: 550px;
+      max-width: 100%;
+      position: relative;
+      vertical-align: middle;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- Search Field -->
+    <div class="ui basic icon top fixed borderless menu own-menu">
+        <div class="item" style="width: 100%">
+            <div class="ui search" style="width:100%">
+                <div class="ui icon input" style="width:100%">
+                  <input class="prompt" type="text" placeholder="Search..." style="width:100%" id="searchField">
+                  <i class="search icon own-search-icon"></i>
+                </div>
+                <div class="results"></div>
+              </div>
+        </div>
+      </div>
+
+      <!-- PDF file will be loaded here -->
+  <iframe id="pdfIframe"></iframe>
+
+  <script type="text/javascript" src="./js/global-dependency/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script type="text/javascript" src="./js/helper.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+
+</body>
+
+</html>
