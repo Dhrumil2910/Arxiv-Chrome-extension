@@ -2,47 +2,91 @@
 <html>
 
 <head>
-
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <style type="text/css">
+  html{
+    overflow-y:hidden;
+  }
+
+
     body {
       min-width: 700px;
       /* your desired width */
+      height: auto;
       height: 550px;
       max-width: 100%;
       position: relative;
       vertical-align: middle;
+      overflow-y:hidden;
+      background: blueviolet;
+      
     }
-
     iframe {
       width: 100%;
       height: 100%;
+      margin-top: 4.5em;
     }
+
+    .container1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
   </style>
-
-
 </head>
 
 <body>
-
   <!-- Search Field -->
-    <div class="ui basic icon top fixed borderless menu own-menu">
-        <div class="item" style="width: 100%">
-            <div class="ui search" style="width:100%">
-                <div class="ui icon input" style="width:100%">
-                  <input class="prompt" type="text" placeholder="Search..." style="width:100%" id="searchField">
-                  <i class="search icon own-search-icon"></i>
-                </div>
-                <div class="results"></div>
-              </div>
-        </div>
-      </div>
 
-      <!-- PDF file will be loaded here -->
+  <!-- <div class="ui left demo vertical inverted sidebar labeled icon menu">
+      <a class="item">
+        <i class="home icon"></i>
+        Home
+      </a>
+      <a class="item">
+        <i class="block layout icon"></i>
+        Topics
+      </a>
+      <a class="item">
+        <i class="smile icon"></i>
+        Friends
+      </a>
+    </div> -->
+  <div class="ui basic icon top fixed borderless menu inverted own-menu" style="background: blueviolet">
+      <div class="item">
+          <i class="bars icon"></i>
+        </div>
+    <div class="item">
+      <h3> kaagaz </h3>
+    </div>
+    <div class="item center" style="width: 69%">
+      <div class="ui search" style="width:100%">
+        <div class="ui icon input" style="width:100%">
+          <input class="prompt" type="text" placeholder="Type and Press Enter..." style="width:100%" id="searchField">
+          <i class="search icon own-search-icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+    <div class="item">
+      <a href="#" target="_blank" class="moreInfoButton"><i class="external alternate icon"></i></a>
+    </div>
+  </div>
+
+  <!-- Container that will contain the information about the extension -->
+  <!-- <div class="container1" >
+    <h1 style="color:white"> Fetch the pdf for any article. Just search  </h1>
+  </div> -->
+  <!-- PDF file will be loaded here -->
   <iframe id="pdfIframe"></iframe>
 
   <script type="text/javascript" src="./js/global-dependency/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script type="text/javascript" src="./js/global-dependency/semantic-ui.min.js">
+  </script>
   <script type="text/javascript" src="./js/helper.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
 
